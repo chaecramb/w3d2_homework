@@ -4,7 +4,8 @@ html,body {
 
 body {
   padding: 20px;
-  background: linear-gradient(90deg, blue, white 100%)
+  background: linear-gradient(180deg, blue, white 100%);
+  background-color: blue;
 }
 
 h1 {

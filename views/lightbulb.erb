@@ -1,17 +1,17 @@
 <form method="get" action="/lightbulb">
   <p>How many 
   <select name="person">
-    <option value="software programmers">software programmers</option>
-    <option value="hardware folks">hardware folks</option>
-    <option value="spammers">spammers</option>
-    <option value="Internet newsgroup users">Internet newsgroup users</option>
-    <option value="support technicians">support technicians</option>
-    <option value="webmasters">webmasters</option>
-    <option value="AOLers">AOLers</option>
-    <option value="software testers">software testers</option>
-    <option value="Microsoft executives">Microsoft executives</option>
-    <option value="apple enthusiasts">apple enthusiasts</option>
-    <option value="Linux users">Linux users</option>
+    <option <%= "selected" if @person == "software programmers" %> value="software programmers">software programmers</option>
+    <option <%= "selected" if @person == "hardware folks" %> value="hardware folks">hardware folks</option>
+    <option <%= "selected" if @person == "spammers" %> value="spammers">spammers</option>
+    <option <%= "selected" if @person == "Internet newsgroup users" %> value="Internet newsgroup users">Internet newsgroup users</option>
+    <option <%= "selected" if @person == "support technicians" %> value="support technicians">support technicians</option>
+    <option <%= "selected" if @person == "webmasters" %> value="webmasters">webmasters</option>
+    <option <%= "selected" if @person == "AOLers" %> value="AOLers">AOLers</option>
+    <option <%= "selected" if @person == "software testers" %> value="software testers">software testers</option>
+    <option <%= "selected" if @person == "Microsoft executives" %> value="Microsoft executives">Microsoft executives</option>
+    <option <%= "selected" if @person == "apple enthusiasts" %> value="apple enthusiasts">apple enthusiasts</option>
+    <option <%= "selected" if @person == "Linux users" %> value="Linux users">Linux users</option>
   </select>
   does it take to change a lightbulb?</p>
   <button>CALCULATE!!!</button>

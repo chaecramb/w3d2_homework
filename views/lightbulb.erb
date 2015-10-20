@@ -1,0 +1,22 @@
+<form method="get" action="/lightbulb">
+  <p>How many 
+  <select name="person">
+    <option value="software programmers">software programmers</option>
+    <option value="hardware folks">hardware folks</option>
+    <option value="spammers">spammers</option>
+    <option value="Internet newsgroup users">Internet newsgroup users</option>
+    <option value="support technicians">support technicians</option>
+    <option value="webmasters">webmasters</option>
+    <option value="AOLers">AOLers</option>
+    <option value="software testers">software testers</option>
+    <option value="Microsoft executives">Microsoft executives</option>
+    <option value="apple enthusiasts">apple enthusiasts</option>
+    <option value="Linux users">Linux users</option>
+  </select>
+  does it take to change a lightbulb?</p>
+  <button>CALCULATE!!!</button>
+</form>
+
+<% if @answer %>
+  <p><%= @answer %></p>
+<% end %>

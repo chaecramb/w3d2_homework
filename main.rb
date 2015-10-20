@@ -43,17 +43,6 @@ get '/advanced_calculator' do
   @second_number = params[:second_number].to_f
   @operator = params[:operator]
 
-  # @result = case @operator
-  # when "+"
-  #   @first_number + @second_number
-  # when "-"
-  #   @first_number - @second_number
-  # when "/"
-  #   @first_number / @second_number
-  # when "*"
-  #   @first_number * @second_number
-  # end
-
   erb :advanced_calculator
 end
 
@@ -95,3 +84,37 @@ get '/converter' do
 
   erb :converter
 end
+
+get '/lightbulb' do
+  @person = params[:person]
+
+  @answer = case @person
+  when "software programmers"
+    "None. That is a hardware issue."
+  when "hardware folks"
+    "None. They just have marketing portray the dead bulb as a feature."
+  when "spammers"
+    "None, but they'll offer to sell everybody in the world a quick and profitable method for doing it."
+  when "Internet newsgroup users"
+    "Fifty. One to do it and 49 to talk about it on alt.bulbs.d."
+  when "support technicians"
+    "We have an exact copy of the light bulb here, and it seems to be working fine. Can you tell me what kind of system you have? Ok. Now, exactly how dark is it? Ok, there could be four or five things wrong . . . have you tried the light switch?"
+  when "webmasters"
+    "404 (Not found)."
+  when "AOLers"
+    "What? You can change light bulbs?"  
+  when "software testers"
+    "We just notice the room is dark; we don't actually fix the problems." 
+  when "Microsoft executives"
+    "None, they will just redefine Darkness (tm) as the industry standard."
+  when "apple enthusiasts"
+    "They don't change the light bulb, they just buy a new house."
+  when "Linux users"
+    "One, but he'll take a weekend to rewire half the basement, constantly promising that you'll never need to change a lightbulb again. When he's done, it only lights up if you flip the switch in a certain way, and it's somehow Microsoft's fault when it doesn't." 
+  end
+
+  erb :lightbulb
+end
+
+
+

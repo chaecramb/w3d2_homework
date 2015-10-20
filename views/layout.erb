@@ -5,14 +5,18 @@
   <title>Calc-U-L8r</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
-<body>
+<body <%= 'style="background-image: url(https://33.media.tumblr.com/fad95e62d03b047481f7ec4e50c6324f/tumblr_mfbl38x3Eg1qdt6bmo1_500.gif); background-repeat: no-repeat; background-position: bottom center; background-size: 100%;"' if @result || @person || @mile || @feet || @inches %> >
+
+
+
   <div>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/calculate">Basic Calculator</a></li>
         <li><a href="/advanced_calculator">Advanced Calculator</a></li>
-        <li><a href="/converter">Converter</a></li>        
+        <li><a href="/converter">Converter</a></li>   
+        <li><a href="/lightbulb">Techie Lightbulb Calculator</a></li>     
       </ul> 
     </nav>
   <%= yield %>  

@@ -1,0 +1,15 @@
+<h1>Metric to Imperial Converter</h1>
+
+
+  
+
+
+<form method="get" action="/converter">
+  <input type="number" name="kilometres" placeholder="kilometres" value="<%= @kilometres %>" step="0.01">
+  <% if @miles %><p><%= @kilometres %> km is <%= @miles %> miles</p><% end %>
+  <input type="number" name="metres" placeholder="metres" value="<%= @metres %>" step="0.01">
+  <% if @feet %><p><%= @metres %> m is <%= @feet %> feet</p><% end %>
+  <input type="number" name="centimetres" placeholder="centimetres" value="<%= @centimetres %>" step="0.01">
+  <% if @inches %><p><%= @centimetres %> cm is <%= @inches %> inches</p><% end %>
+  <button>CALCULATE!!!</button>
+</form>

@@ -16,3 +16,9 @@ ul {
 ul li { 
   display: inline;
 }
+
+input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -58,11 +58,40 @@ get '/advanced_calculator' do
 end
 
 get '/power' do
-  @first_number = params[:first_number].to_f
-  @second_number = params[:second_number].to_f
+  @first_number = params[:first_number]
+  @second_number = params[:second_number]
   @operator = params[:operator]
 
-  @result = @first_number ** @second_number
+  @result = @first_number.to_f ** @second_number.to_f if @first_number && @second_number 
 
   erb :power
+end
+
+get '/square_root' do
+  @number = params[:number]
+
+
+  @result = Math::sqrt(@number.to_f) if @number 
+
+  erb :square_root
+end
+
+get '/converter' do
+  @kilometres = params[:kilometres]
+  @metres = params[:metres]
+  @centimetres = params[:centimetres]
+
+  if @kilometres 
+    @miles = (@kilometres.to_f / 1.609344).round(2)
+  end
+
+  if @metres 
+    @feet = (@metres.to_f / 0.3048).round(2)
+  end
+
+  if @centimetres
+    @inches = (@centimetres.to_f / 2.54).round(2)
+  end
+
+  erb :converter
 end

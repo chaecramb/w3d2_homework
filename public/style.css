@@ -4,7 +4,11 @@ html,body {
 
 body {
   padding: 20px;
-  background-color: blue;
+  background: linear-gradient(90deg, blue, white 100%)
+}
+
+h1 {
+  color: green;
 }
 
 nav {
@@ -19,6 +23,11 @@ div {
 
 ul {
   list-style-type: none;
+}
+
+img {
+  height: 70px;
+  width: auto;
 }
 
 li {
